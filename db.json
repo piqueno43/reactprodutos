@@ -1,0 +1,96 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "produto": "Sabão",
+      "categoria": 1
+    },
+    {
+      "id": 2,
+      "produto": "Sabão em Pó",
+      "categoria": 1
+    },
+    {
+      "id": 3,
+      "produto": "Bolacha",
+      "categoria": 2
+    },
+    {
+      "id": 4,
+      "produto": "Vazo de planta",
+      "categoria": 3
+    },
+    {
+      "produto": "Criando novo produto",
+      "categoria": "1",
+      "id": 5
+    },
+    {
+      "produto": "Novo produto de nova categoria",
+      "categoria": "5",
+      "id": 6
+    },
+    {
+      "produto": "Novo produto em Alimento",
+      "categoria": "2",
+      "id": 7
+    },
+    {
+      "produto": "Meia",
+      "categoria": "4",
+      "id": 8
+    },
+    {
+      "produto": "Pera",
+      "categoria": "2",
+      "id": 9
+    },
+    {
+      "produto": "Sapato",
+      "categoria": "3",
+      "id": 10
+    },
+    {
+      "produto": "Novo em nova",
+      "categoria": "5",
+      "id": 11
+    },
+    {
+      "produto": "Pet",
+      "categoria": "4",
+      "id": 12
+    },
+    {
+      "produto": "Novo produto em Esporte",
+      "categoria": "4",
+      "id": 13
+    },
+    {
+      "produto": "Novo produto em mais outra",
+      "categoria": "6",
+      "id": 14
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "categoria": "Limpeza"
+    },
+    {
+      "id": 2,
+      "categoria": "Alimento"
+    },
+    {
+      "id": 3,
+      "categoria": "Utilidade"
+    },
+    {
+      "id": 4,
+      "categoria": "Esporte"
+    },
+    {
+      "categoria": "Nova",
+      "id": 5
+    }
+  ]
+}
