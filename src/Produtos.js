@@ -5,8 +5,9 @@ import ProdutosHome from './ProdutosHome'
 import ProdutosNovo from './ProdutosNovo'
 import Categoria from './Categoria'
 
+import ProdutosEditar from './ProdutosEditar'
 class Produtos extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -20,22 +21,22 @@ class Produtos extends Component {
     this.handleEditCategoria = this.handleEditCategoria.bind(this)
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.props.loadCategorias()
   }
 
-  editCategoria(categoria) {
+  editCategoria (categoria) {
     this.setState({
       editingCategoria: categoria.id
     })
   }
-  cancelEditing() {
+  cancelEditing () {
     this.setState({
       editingCategoria: ''
     })
   }
 
-  renderCategoria(cat) {
+  renderCategoria (cat) {
     return (
       <li className='list-group-item' key={cat.id}>
         {this.state.editingCategoria === cat.id && (
@@ -89,7 +90,7 @@ class Produtos extends Component {
     )
   }
 
-  handleNewCategoria(key) {
+  handleNewCategoria (key) {
     if (key.keyCode === 13) {
       this.props.createCategoria({
         categoria: this.refs.categoria.value
@@ -98,7 +99,7 @@ class Produtos extends Component {
     }
   }
 
-  handleEditCategoria(key) {
+  handleEditCategoria (key) {
     if (key.keyCode === 13) {
       this.props.editCategoria({
         id: this.state.editingCategoria,
@@ -109,7 +110,7 @@ class Produtos extends Component {
       })
     }
   }
-  render() {
+  render () {
     const { match, categorias } = this.props
     return (
       <div className='row'>
@@ -120,7 +121,7 @@ class Produtos extends Component {
             </div>
             <div className='card-body'>
               <ul className='list-group list-group-flush'>
-                {categorias.map( cat=> this.renderCategoria(cat))}
+                {categorias.map(cat => this.renderCategoria(cat))}
               </ul>
               <input
                 onKeyUp={this.handleNewCategoria}
@@ -150,6 +151,19 @@ class Produtos extends Component {
             }}
           />
           <Route
+            path={match.url + '/editar/:id'}
+            render={props => {
+              return (
+                <ProdutosEditar
+                  {...props}
+                  categorias={categorias}
+                  readProduto={this.props.readProduto}
+                  editProduto={this.props.editProduto}
+                />
+              )
+            }}
+          />
+          <Route
             path={match.url + '/categoria/:catId'}
             render={props => {
               return (
@@ -159,6 +173,7 @@ class Produtos extends Component {
                   loadCategoria={this.props.loadCategoria}
                   produtos={this.props.produtos}
                   categoria={this.props.categoria}
+                  removeProduto={this.props.removeProduto}
                 />
               )
             }}

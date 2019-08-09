@@ -16,9 +16,12 @@ class App extends Component {
     this.createCategoria = this.createCategoria.bind(this)
     this.editCategoria = this.editCategoria.bind(this)
 
+    this.readProduto = this.readProduto.bind(this)
+    this.editProduto = this.editProduto.bind(this)
     this.createProduto = this.createProduto.bind(this)
     this.loadProdutos = this.loadProdutos.bind(this)
     this.loadCategoria = this.loadCategoria.bind(this)
+    this.removeProduto = this.removeProduto.bind(this)
 
   }
 
@@ -59,6 +62,19 @@ class App extends Component {
         categoria: res.data
       })
     })
+  }
+  removeProduto(produto){
+    return this.props.api.deleteProduto(produto.id)
+    
+  }
+
+  readProduto(id){
+    return this.props.api.readProduto(id)
+  }
+
+  editProduto(produto){
+    return this.props.api.editProduto(produto)
+
   }
   render() {
     return (
@@ -123,6 +139,9 @@ class App extends Component {
                   loadCategoria={this.loadCategoria}
                   produtos={this.state.produtos}
                   categoria={this.state.categoria}
+                  removeProduto={this.removeProduto}
+                  readProduto={this.readProduto}
+                  editProduto={this.editProduto}
                 />
               )}
             />

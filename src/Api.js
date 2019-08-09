@@ -15,7 +15,7 @@ const apis = {
     createProduto: (produto) => api.post('produtos', produto),
     loadProdutos: (categoria) => api.get('produtos?categoria=' + categoria),
     deleteProduto: (id) => api.delete('produtos/' + id),
-    editProduto: (produto) => api.put('produtos/' + produto.id, produto)
+    editProduto: (produto) => api.put('produtos/' + produto.id, produto),
 
 }
 

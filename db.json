@@ -21,19 +21,14 @@
       "categoria": 3
     },
     {
-      "produto": "Criando novo produto",
-      "categoria": "1",
-      "id": 5
-    },
-    {
       "produto": "Novo produto de nova categoria",
       "categoria": "5",
       "id": 6
     },
     {
-      "produto": "Novo produto em Alimento",
-      "categoria": "2",
-      "id": 7
+      "id": 7,
+      "produto": "Ovos",
+      "categoria": "2"
     },
     {
       "produto": "Meia",
@@ -46,9 +41,9 @@
       "id": 9
     },
     {
+      "id": 10,
       "produto": "Sapato",
-      "categoria": "3",
-      "id": 10
+      "categoria": "4"
     },
     {
       "produto": "Novo em nova",
@@ -56,19 +51,19 @@
       "id": 11
     },
     {
+      "id": 12,
       "produto": "Pet",
-      "categoria": "4",
-      "id": 12
-    },
-    {
-      "produto": "Novo produto em Esporte",
-      "categoria": "4",
-      "id": 13
+      "categoria": "1"
     },
     {
       "produto": "Novo produto em mais outra",
       "categoria": "6",
       "id": 14
+    },
+    {
+      "id": 15,
+      "produto": "Sabão em Pó",
+      "categoria": "1"
     }
   ],
   "categorias": [
@@ -86,11 +81,7 @@
     },
     {
       "id": 4,
-      "categoria": "Esporte"
-    },
-    {
-      "categoria": "Nova",
-      "id": 5
+      "categoria": "Esportes"
     }
   ]
 }
